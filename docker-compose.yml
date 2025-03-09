@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  spring-boot-app:
+    image: my-spring-app:latest
+    container_name: test-spring-app
+    ports:
+      - "8082:8080"  # 백엔드 API 포트
+    environment:
+      - USE_PROFILE=dev
+
